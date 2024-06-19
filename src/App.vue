@@ -1,26 +1,43 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <UrlSearch />
+    <SearchHistory />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import UrlSearch from './components/UrlSearch.vue';
+import SearchHistory from './components/SearchHistory.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    UrlSearch,
+    SearchHistory,
+  },
+};
 </script>
 
 <style>
+/* Global styles */
+body {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 10px;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
